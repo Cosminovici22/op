@@ -1,0 +1,5 @@
+{
+    str s = "Hello, \n";
+    str t = "world!";
+    str c = s + t
+}

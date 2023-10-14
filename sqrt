@@ -1,0 +1,55 @@
+{
+    func abs(num x) {
+        if (x < 0) {
+            ret (0 - 1)*x
+        } else {
+            ret x
+        }
+    };
+
+    func ceil(num x) {
+        num i = 0;
+        while (1) {
+            if (i - x >= 0) ret i;
+            i = i + 1
+        }
+    };
+
+    func floor(num x) {
+        num i = 0;
+        while (1) {
+            if (x - i < 1) ret i;
+            i = i + 1
+        }
+    };
+
+    func trunk(num x) {
+        num cl = ceil(x);
+        if (cl - x > 0.5) ret floor(x) else ret cl
+    };
+
+    func sqrt(num n) {
+        func sqrt_rec(num n, num p, num u) {
+            num m = (p + u)/2;
+            if (abs(n - m*m) < 0.000001) {
+                ret m
+            } else if (m*m > n) {
+                ret sqrt_rec(n, p, m)
+            } else if (m*m < n) {
+                ret sqrt_rec(n, m, u)
+            }
+        };
+        if (n < 0) {
+            ret "imaginary"
+        } else {
+            ret sqrt_rec(n, 0, n)
+        }
+    };
+
+    func main {
+        num res = sqrt(5);
+        ret 0
+    };
+
+    main
+}

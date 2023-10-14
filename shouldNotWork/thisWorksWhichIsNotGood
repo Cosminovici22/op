@@ -1,0 +1,4 @@
+ret 9;
+ret 8
+
+// i think this works for the same reasons that eof and invalid tokens are treated the same
