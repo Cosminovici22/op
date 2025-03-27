@@ -1,0 +1,13 @@
+{
+    str a = "Hello, ";
+    str b = "world!";
+
+    str c = a + b;
+
+    str d = a + 2;
+    str e = b - 3;
+    str f = c + 2 - 3;
+    num x = (f == "llo, wor");
+
+    str g = a * 10
+}
